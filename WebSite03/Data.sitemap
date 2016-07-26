@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/admin/test.aspx" title="数据录入人员管理页面"  description="">
+    
+    <siteMapNode url="" title="数据管理"  description="">
+      <siteMapNode url="~/admin/CreateTable.aspx" title="创建数据表"  description="" />
+      <siteMapNode url="~/admin/222.aspx" title="管理数据表"  description="" />
+      <siteMapNode url="~/admin/333.aspx" title="查看表数据"  description="" />
+      <siteMapNode url="~/admin/444.aspx" title="录入表数据"  description="" />
+    </siteMapNode>
+    <!--
+    <siteMapNode url="" title="bbb"  description="">
+      <siteMapNode url="~/admin/Admin.aspx" title="bbb1"  description="" />
+      <siteMapNode url="~/admin/AdminAdd.aspx" title="bbb2"  description="" />
+    </siteMapNode>
+    <siteMapNode url="" title="ccc"  description="">
+      <siteMapNode url="~/admin/FriendLinkAdd.aspx" title="ccc1"  description="" />
+      <siteMapNode url="~/admin/FriendLink.aspx" title="ccc2"  description="" />
+    </siteMapNode>
+    <siteMapNode url="" title="ddd"  description="">
+      <siteMapNode url="~/admin/NewsAdd.aspx" title="ddd1"  description="" />
+      <siteMapNode url="~/admin/NewsEdit.aspx" title="ddd2"  description="" />
+    </siteMapNode>
+    <siteMapNode url="" title="eee"  description="">
+      <siteMapNode url="~/admin/NewsAudit.aspx" title="eee1"  description="" />
+      <siteMapNode url="~/admin/NewsCategory.aspx" title="eee2"  description="" />
+    </siteMapNode>
+    -->
+  </siteMapNode>
+</siteMap>

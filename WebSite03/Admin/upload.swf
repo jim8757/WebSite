@@ -1,0 +1,46 @@
+function deleteItem():void
+{ 
+	var selectItems:Array = process_list.selectedItems;
+	var selectIndex:Array = process_list.selectedIndices;
+	selectIndex = selectIndex.sort(2);//索引按降序排序
+	var iCount:int = selectItems.length;
+	var sizeMum:Number = 0;
+	for(var i:int=0;i<iCount;i++)
+	{
+		info.splice(selectIndex[i],1);
+		fileRef.fileList.splice(selectIndex[i],1);//移除的选择项按索引从大到小移除，以便移除过程中索引不超界
+	}
+	for(var j:Number=0;j<fileRef.fileList.length;j++)
+	{
+		sizeMum+=fileRef.fileList[j].size;
+	}
+	process_list.dataProvider = info;
+	tip_txt.text="共"+fileRef.fileList.length+"个文件 "+(sizeMum/(1024*1024)).toFixed(4).toString()+"MB";
+	if(info.length<=0)
+	{
+		delete_btn.enabled = false;
+	}
+} 
+
+
+//===================
+internal function uploadHandler():void
+{
+	if(uploadFile_num!=0) return;
+	if(process_list.dataProvider==null || info.length<=0)
+	{
+		Alert.show("您还未选择文件!","提示信息");
+		return;
+	}
+	else
+	{
+		ExternalInterface.call("disabledButton"); //点上传后禁用按钮
+	}
+	for(var i:Number=0;i<fileRef.fileList.length;i++)
+	{
+		upload_size_total+=fileRef.fileList[i].size;
+	}
+	uploadfile(uploadFile_num);
+	add_btn.enabled = false; //点上传后禁用浏览按钮
+	delete_btn.enabled = false;//点上传后禁用删除按钮
+} 
