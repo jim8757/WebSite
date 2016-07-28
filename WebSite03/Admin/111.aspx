@@ -78,8 +78,7 @@
         }
 
         var values = "";
-        function passIndexesToServer()
-        {
+        function passIndexesToServer() {
             var curTable = document.getElementById("TableOfIndexes");
             var rows = curTable.rows.length;
             var cols = curTable.rows.item(0).cells.length;
@@ -103,7 +102,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="Text-align:center;width:100%;">
+        <div style="text-align: center; width: 100%;">
             请输入表格名称
         <br />
             <br />

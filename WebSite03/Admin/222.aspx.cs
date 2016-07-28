@@ -119,14 +119,18 @@ public partial class Admin_222 : System.Web.UI.Page
                 {
                     timeCell = new TableCell();
                     timeLabel = new Label();
-                    if(i > 0) timeLabel.Text = i + " 月";
+                    if(i > 0)
+                    {
+                        timeLabel.Text = i + " 月";
+                    }
                     timeCell.Controls.Add(timeLabel);   //添加label到cell中  
                     timeRow.Cells.Add(timeCell);
                 }
             }
             foreach (DataRow mDr in ds.Tables[0].Rows)
             {
-                if (rowFlag > 11) break;
+                if (rowFlag > 11)
+                    break;
                 if (rowFlag == 0)
                 {
                     tCell = new TableCell();        //new出一个cell  
@@ -150,8 +154,6 @@ public partial class Admin_222 : System.Web.UI.Page
             autoTable.Rows.Add(tRow);//添加TableRow  
         }
 
-
-
         for (int iRow = 0; iRow < 3; iRow++)
         {
             tRow = new TableRow();//new出一个行来
@@ -161,12 +163,20 @@ public partial class Admin_222 : System.Web.UI.Page
                 //tCell.Width = 120;
                 //tCell.Height = 100;
                 TextBox tb = new TextBox();
-                if (iRow > 0 || jCol > 0) tb.Enabled = false;
+                if (iRow > 0 || jCol > 0)
+                {
+                    tb.Enabled = false;
+                }
                 tCell.Controls.Add(tb);
                 tRow.Cells.Add(tCell);
                 if (iRow % 2 == 0)
+                {
                     tCell.BackColor = System.Drawing.Color.LightBlue;
-                else tCell.BackColor = System.Drawing.Color.LightCyan;
+                }
+                else
+                {
+                    tCell.BackColor = System.Drawing.Color.LightCyan;
+                }
             }
             autoTable1.Rows.Add(tRow);//添加TableRow  
         }
